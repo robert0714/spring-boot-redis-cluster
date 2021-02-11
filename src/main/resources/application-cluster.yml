@@ -9,6 +9,11 @@ spring:
   cache:
     type: redis
   redis:
+     sentinel:
+       master: master1
+       nodes:
+        - 10.0.30.101:26379
+        - 10.0.30.102:26379
      cluster:       
        nodes:
         - 10.0.30.101:6379
